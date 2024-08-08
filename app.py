@@ -11,7 +11,7 @@ st.set_page_config(layout="wide")
 st.markdown(overall_css, unsafe_allow_html=True)
 
 def main():
-    st.title("Generative Artifical Intellegence")
+    st.title("Generative Artist")
 
     col1,  col3 = st.columns(2)
 
