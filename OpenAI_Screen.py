@@ -17,7 +17,7 @@ def generate_response(prompt):
             {"role": "system", "content": prompt["system"]},
             {"role": "user", "content": prompt["user"]}
         ],
-        max_tokens=10
+        max_tokens=50
     )
     return response.choices[0].message.content.strip()
 
