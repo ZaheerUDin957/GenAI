@@ -211,15 +211,6 @@ def email_draft_app():
             response = get_gemini_response(prompt)
             st.write(response)
 
-def chat_with_gpt_app():
-    chat_input = st.text_area("Enter your message for the chat:", "", height=300, max_chars=5000)
-    if st.button('Send Message'):
-        if chat_input:
-            prompt = f"Chat with GPT-4 based on the following message:\n{chat_input}"
-            st.write("**GPT-4 Response:**")
-            response = get_gemini_response(prompt)
-            st.write(response)
-
 # Main application function
 def Gemanai_App():
     # Display API key input and save it
@@ -253,7 +244,6 @@ def Gemanai_App():
             "Fill Masking",
             "Rap Writing",
             "Email Draft",
-            "Chat with GPT"
         ])
 
         # Call the respective function based on the selected task
@@ -301,8 +291,7 @@ def Gemanai_App():
             rap_writing_app()
         elif task == "Email Draft":
             email_draft_app()
-        elif task == "Chat with GPT":
-            chat_with_gpt_app()
+
 
 if __name__ == "__main__":
     Gemanai_App()
